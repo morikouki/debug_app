@@ -25,7 +25,8 @@ class MemosController < ApplicationController
   # POST /memos.json
   def create
     @memo = Memo.new(memo_params)
-
+    binding.pry
+    
     respond_to do |format|
       if @memo.save
         format.html { redirect_to @memo, notice: 'Memo was successfully created.' }
